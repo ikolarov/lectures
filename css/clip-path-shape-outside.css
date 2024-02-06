@@ -1,0 +1,12 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container img {
+    float: left;
+    margin-right: 10px;
+    clip-path: polygon(100% 0, 0 0, 0 100%); 
+    shape-outside: polygon(100% 0, 0 0, 0 100%);
+}

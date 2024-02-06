@@ -1,0 +1,13 @@
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    transition: max-width 2s;
+}
+
+.content.animate {
+    max-width: 320px;
+}
+
+.content p {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}

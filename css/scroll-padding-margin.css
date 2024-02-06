@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.section {
+    height: 120vh;
+    background-color: #9b2948;
+    padding-top: 80px;
+}
+
+.scroll-to {
+    height: 100vh;
+    background-color: #ffcd74;
+    scroll-margin-top: 50px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 50px;
+}
+
+.header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}

@@ -1,0 +1,22 @@
+.output {
+    padding: 0;
+    margin: 20px 0;
+    height: 20px;
+    border: 1px solid #000; 
+  }
+  
+  .target {
+    display: flex;
+    flex-wrap: wrap;;
+    gap: 5px;
+  }
+  
+  .box {
+    width: 10px;
+    height: 10px;
+    background: red;
+  }
+  
+  .green .box {
+    background-color: green;
+  }

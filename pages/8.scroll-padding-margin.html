@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Padding/Margin</title>
+    <link rel="stylesheet" href="../css/scroll-padding-margin.css">
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="#scroll-to">Scroll to section</a></li>
+        </ul>
+    </div>
+    <div class="section">
+    </div>
+    <div class="scroll-to" id="scroll-to"></div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- Old way -->
+    <!-- <script>
+        $(document).ready(function () {
+            const HEADER_HEIGHT = 50;
+            $(".header a").on("click", function (e) {
+                e.preventDefault();
+                var target = $(this).attr("href");
+                var targetPos = $(target).offset().top;
+                $("html, body").scrollTop(targetPos - HEADER_HEIGHT);
+            });
+        });
+    </script> -->
+
+</body>
+</html>

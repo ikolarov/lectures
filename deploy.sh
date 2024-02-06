@@ -1,0 +1,1 @@
+surge ./ --domain lectures-ikolarov.surge.sh

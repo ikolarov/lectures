@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.section__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    color: #fff;
+    background: #9b2948;
+    opacity: 0;
+    transition: all .3s;
+    transform: translateY(100px) scale(.5);
+}
+
+.section:nth-child(2n) .section__inner {
+    background-color: #ffcd74;
+}
+
+.section.show .section__inner {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}

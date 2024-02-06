@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML Dialogs</title>
+        <link rel="stylesheet" href="../css/modal.css" />
+    </head>
+    <body>
+        <button type="button" class="modal-btn">Open Modal</button>
+
+        <dialog class="modal">
+            <form>
+                <button type="submit" formmethod="dialog">close modal</button>
+            </form>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aspernatur repellat veritatis quidem expedita quos accusamus
+                natus sint atque non aliquid iure esse modi ab, unde earum
+                numquam, provident itaque rerum!
+            </p>
+        </dialog>
+
+        <div class="js-modal">
+            <div class="js-modal__inner">
+                <button class="js-modal-close">close modal</button>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aspernatur repellat veritatis quidem expedita quos accusamus
+                    natus sint atque non aliquid iure esse modi ab, unde earum
+                    numquam, provident itaque rerum!
+                </p>
+            </div>
+        </div>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+            necessitatibus, nostrum laudantium quod est vero voluptates
+            deserunt! Modi praesentium, ratione, debitis eligendi velit natus
+            voluptatum magni, asperiores laboriosam a ducimus!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+            necessitatibus, nostrum laudantium quod est vero voluptates
+            deserunt! Modi praesentium, ratione, debitis eligendi velit natus
+            voluptatum magni, asperiores laboriosam a ducimus!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+            necessitatibus, nostrum laudantium quod est vero voluptates
+            deserunt! Modi praesentium, ratione, debitis eligendi velit natus
+            voluptatum magni, asperiores laboriosam a ducimus!
+        </p>
+
+        <button onclick="toggleModal(event)">Custom modal</button>
+
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script src="../js/modal.js"></script>
+
+        <style>
+            .js-modal {
+                position: fixed;
+                align-items: center;
+                justify-content: center;
+                inset: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+            }
+            
+            .js-modal.is-open {
+                display: flex;
+                opacity: 1;
+                visibility: visible;
+                transition: all .3s;
+            }
+
+            .js-modal__inner {
+                padding: 20px;
+                max-width: 600px;;
+                background-color: #fff;
+                border: 1px solid #000;
+                transform: translateY(50%);
+                transition: transform .3s;
+            }
+
+            .is-open .js-modal__inner {
+                transform: translateY(0);
+            }
+        </style>
+
+        <script>
+            $('.js-modal').on('click', function(e) {
+                if (e.target === this) {
+                    toggleModal();
+                }
+            });
+            $('.js-modal-close').on('click', toggleModal);
+            function toggleModal() {
+                $('.js-modal').toggleClass('is-open');
+            }
+        </script>
+    </body>
+</html>

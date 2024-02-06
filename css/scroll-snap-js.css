@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.viewer {
+    height: 100vh;
+}
+
+.slide {
+    height: 100vh;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide:nth-child(odd) {
+    background-color: #f49592;
+}
+
+.slide:nth-child(even) {
+    background-color: #00b1a0;
+}

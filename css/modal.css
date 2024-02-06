@@ -1,0 +1,33 @@
+.modal {
+  inset: 0;
+  max-width: 500px;
+}
+
+.modal::backdrop {
+  animation: backdrop-fade .3s forwards;
+}
+
+.modal[open] {
+  animation: fadeIn .3s forwards;
+}
+
+@keyframes fadeIn {
+  0% { 
+    opacity: 0; 
+    transform: translateY(50%); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0%); 
+  }
+}
+
+
+@keyframes backdrop-fade {
+  from {
+    background: transparent;
+  }
+  to{
+    background: rgba(0,0,0, .4);
+  }
+}

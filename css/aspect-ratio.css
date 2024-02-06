@@ -1,0 +1,19 @@
+.wrapper {
+    aspect-ratio: 1 / 1;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.wrapper video,
+.wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper img {
+    object-fit: contain;
+}
+
+.wrapper video {
+    object-fit: cover;
+}

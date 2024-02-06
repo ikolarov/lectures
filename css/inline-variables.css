@@ -1,0 +1,51 @@
+.wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.hover {
+    --scale: 1;
+    --rotation: 45deg;
+    --background: #9b2948;
+}
+
+.hover--alt {
+    --rotation: 90deg;
+    --scale: 0.8;
+    --background: #ffcd74;
+}
+
+.hover--alt2 {
+    --rotation: 90deg;
+    --scale: 0.8;
+    --background: #000;
+}
+
+.hover-item {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    transform: rotate(0) translateX(0);
+    transition: transform .3s, background .3s;
+}
+
+.hover:hover .hover-item {
+    transform: rotate(var(--rotation)) scale(var(--scale));
+    background: var(--background);
+}
+
+
+/* Old way */
+
+/* .hover:hover .hover-item {
+    transform: rotate(45deg) scale(1);
+    background: #9b2948;
+}
+
+.hover--alt:hover .hover-item {
+    transform: rotate(90deg) scale(.8);
+    background: #ffcd74;
+} */

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+}
+
+.viewer {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.slide {
+    height: 100vh;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* scroll-snap */
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
+
+.slide:nth-child(odd) {
+    background-color: #f49592;
+}
+
+.slide:nth-child(even) {
+    background-color: #00b1a0;
+}

@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    background: #ddd;
+}
+
+.text-mask {
+    background: #fff;
+    padding-bottom: 30vw;
+    text-align: center;
+    mask-position: bottom center;
+    mask-repeat: repeat-x;
+    mask-size: cover;
+    mask-image: url('../pages/image.svg');
+}
+
+.text-mask h1 {
+    position: fixed;
+    width: 100%;
+    font-size: 80px;
+}
+
+.img-wrapper {
+    text-align: center;
+}
+
+.img-wrapper .img {
+    width: 100%;
+    height: auto;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 50%);
+}
+
+.bg {
+    background: #ffcd74;
+}
+
+.bg-text {
+    padding: 20px;
+}
