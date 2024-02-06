@@ -6,16 +6,14 @@ const config = { attributes: true, childList: true };
 
 // Callback function to execute when mutations are observed
 const callback = (mutationList, observer) => {
-    // console.log(mutationList)
-    // for (const mutation of mutationList) {
-    //     if (mutation.type === "childList") {
-    //         output.textContent = "A child node has been added or removed.";
-    //     } else if (mutation.type === "attributes") {
-    //         output.textContent =
-    //             "The " + mutation.attributeName + " attribute was modified.";
-    //     }
-    // }
-    console.log(1)
+    for (const mutation of mutationList) {
+        if (mutation.type === "childList") {
+            output.textContent = "A child node has been added or removed.";
+        } else if (mutation.type === "attributes") {
+            output.textContent =
+                "The " + mutation.attributeName + " attribute was modified.";
+        }
+    }
 };
 
 const observer = new MutationObserver(callback);
